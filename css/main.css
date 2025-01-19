@@ -126,7 +126,7 @@ body{
 .footer-section {
     background-color: #2b2b2b; /* Dark gray background */
     color: #d3d3d3; /* Light gray text */
-    padding: 60px 0;
+    padding: 60px 0 0;
 }
 
 .footer-title {
@@ -419,4 +419,24 @@ body{
 	
 }
 
+
+
+.degree-block {
+	height: 150px; /* Ensures all blocks are of the same height */
+	background-color: #008B8B; /* Matches the teal color */
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.degree-block:hover {
+	background-color: #006666; /* Slightly darker teal for hover */
+}
 
