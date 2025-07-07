@@ -1,0 +1,76 @@
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.tooltip {
+  position: absolute;
+  top: 5%; /* Position it directly below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 5px; /* Small spacing between icon and tooltip */
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px; /* Place the triangle at the top */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+
+.tooltip.show {
+  animation: fadeInOut 3s infinite ease-in-out;
+}
+.profile-icon {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+.button img.profile-icon {
+  width: 80%; /* Adjust as needed */
+  height: 80%; /* Adjust as needed */
+  object-fit: contain;
+}
+
+.scrolly {
+  scroll-behavior: smooth;
+}
+
