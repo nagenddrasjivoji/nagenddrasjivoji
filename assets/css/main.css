@@ -3502,9 +3502,17 @@ body.homepage #header h1 {
   border-radius: 0.25em;        /* Rounded corners */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Optional: subtle shadow */
 }
+/* Always apply borderDown by default (for small screens) */
+.borderResponsive {
+  border-bottom: 1px solid #ccc;
+}
 
-.borderRight {
-  border-right: 1px solid #ccc; /* Light gray solid border on the right */
+/* On small screens and up (>= 640px), switch to borderRight instead */
+@media (min-width: 640px) {
+  .borderResponsive {
+    border-bottom: 0;
+    border-right: 1px solid #ccc;
+  }
 }
 
 
