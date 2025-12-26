@@ -1751,6 +1751,24 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		body.is-preload #footer {
-			opacity: 0;
-		}
+body.is-preload #footer {
+	opacity: 0;
+}
+
+/* Page transition helpers */
+body.page-transition-enabled {
+	opacity: 1;
+	transition: opacity 350ms ease;
+}
+
+body.page-transition-enabled.page-transition-hidden {
+	opacity: 0;
+}
+
+body.page-transition-enabled.page-transition-visible {
+	opacity: 1;
+}
+
+body.page-transition-enabled.page-transition-fading {
+	opacity: 0;
+}
